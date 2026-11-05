@@ -6,6 +6,7 @@ CREATE OR REPLACE PACKAGE BODY log_utils AS
         p_appl_proc IN VARCHAR2,
         p_message   IN VARCHAR2
     ) IS
+        PRAGMA AUTONOMOUS_TRANSACTION;
     BEGIN
         INSERT INTO logs (
             appl_proc,
